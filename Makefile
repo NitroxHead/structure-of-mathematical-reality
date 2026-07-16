@@ -9,10 +9,14 @@
 #   build/chNN-*/[doc].{tex,pdf}
 #                            generated print layer. Never hand-edited,
 #                            never committed. Delete it freely.
+#   pdf/chNN-*/[doc].pdf     a tracked copy of the built PDFs, published so
+#                            each file has a stable URL. Generated: refresh
+#                            with 'make pdfs', never hand-edit.
 #
 #   make            render + compile everything from chapter markdown
 #   make render     markdown -> tex only
 #   make book       stitch the 17 lectures into a single build/book.pdf
+#   make pdfs       refresh pdf/, the tracked copy served at stable paths
 #   make reseed     re-derive chapter markdown from curriculum.md
 #                   (skips files with an AUTHORED marker)
 #   make clean      remove LaTeX aux files
@@ -21,8 +25,9 @@
 SHELL := /bin/bash
 STYDIR := $(CURDIR)/shared
 BUILD  := $(CURDIR)/build
+PDFDIR := $(CURDIR)/pdf
 
-.PHONY: all render reseed pdf book clean distclean
+.PHONY: all render reseed pdf book pdfs clean distclean
 
 all: pdf
 	@echo "Build complete."
@@ -61,6 +66,18 @@ book:
 		{ echo "FAILED: book.tex (see build/book.log)"; exit 1; }
 	@$(MAKE) --no-print-directory clean
 	@echo "build/book.pdf built."
+
+# Refresh pdf/, the committed copy published at stable paths. Unlike build/,
+# this one is tracked, so run it deliberately and expect a large diff.
+pdfs: pdf book
+	@rm -rf "$(PDFDIR)"
+	@mkdir -p "$(PDFDIR)"
+	@cp "$(BUILD)/book.pdf" "$(PDFDIR)/"
+	@set -e; for d in "$(BUILD)"/ch*/; do \
+		n=$$(basename "$$d"); mkdir -p "$(PDFDIR)/$$n"; \
+		cp "$$d"*.pdf "$(PDFDIR)/$$n/"; \
+	done
+	@echo "pdf/ refreshed: $$(find "$(PDFDIR)" -name '*.pdf' | wc -l) files."
 
 clean:
 	@rm -f "$(BUILD)"/ch*/*.aux "$(BUILD)"/ch*/*.log "$(BUILD)"/ch*/*.out \

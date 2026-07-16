@@ -63,7 +63,7 @@ Chapters run in parallel with outside reading. The main spine is *The Princeton 
 
 If you just want to read, take `chapters/chNN-*/lecture.md` in order. The markdown is the source and is meant to be readable on its own.
 
-For typeset PDFs, either grab them from the [Releases](../../releases) page or build them yourself.
+For typeset PDFs there are three options. Browse `pdf/` in this repo, where every document sits at a stable path such as `pdf/ch01-mathematics-is-not-about-numbers/lecture.pdf`. Download the whole set from the [Releases](../../releases) page, which carries the assembled `book.pdf` and a zip of the same folder tree. Or build them yourself.
 
 ## Building
 
@@ -73,11 +73,12 @@ You need Python 3 and a LaTeX distribution providing `pdflatex` (TeX Live or Mac
 make          # render markdown to LaTeX and compile every chapter PDF
 make render   # markdown to LaTeX only, no PDFs
 make book     # stitch the 17 lectures into a single build/book.pdf
+make pdfs     # refresh the tracked pdf/ copy from build/
 make clean    # remove LaTeX aux files
 make distclean# remove the whole build/ tree
 ```
 
-Everything lands in `build/`, which is disposable and not tracked. Nothing in `build/` should ever be edited by hand.
+Everything lands in `build/`, which is disposable and not tracked. `make pdfs` then copies the result into `pdf/`, which is tracked so that each document has a stable URL. Nothing in `build/` or `pdf/` should ever be edited by hand, since both are regenerated from the markdown.
 
 ## Repository layout
 
@@ -86,7 +87,8 @@ curriculum.md          the blueprint: scope, readings, schedule, seed content
 chapters/chNN-slug/    the course itself, six markdown documents per chapter
 shared/smr-style.sty   LaTeX style shared by every document
 scripts/               the markdown to LaTeX pipeline
-build/                 generated output (git-ignored)
+pdf/chNN-slug/         built PDFs at stable paths (generated, tracked)
+build/                 LaTeX and PDF working output (generated, git-ignored)
 ```
 
 `curriculum.md` is the single source the chapters were seeded from. `make reseed` re-derives chapter markdown from it, but skips any file carrying an `<!-- AUTHORED -->` marker, since those have been expanded well past the blueprint and are first-class content.
