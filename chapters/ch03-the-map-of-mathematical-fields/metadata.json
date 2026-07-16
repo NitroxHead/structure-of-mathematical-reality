@@ -1,0 +1,16 @@
+{
+  "chapter": 3,
+  "slug": "the-map-of-mathematical-fields",
+  "title": "The Map of Mathematical Fields",
+  "phase": "I",
+  "phase_title": "What Mathematics Is",
+  "folder": "ch03-the-map-of-mathematical-fields",
+  "files": [
+    "reading.md",
+    "lecture.md",
+    "notes.md",
+    "exercises.md",
+    "assignment.md",
+    "quiz.md"
+  ]
+}

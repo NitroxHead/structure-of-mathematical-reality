@@ -1,0 +1,16 @@
+{
+  "chapter": 10,
+  "slug": "dynamics-and-approximation",
+  "title": "Dynamics and Approximation: The Structure of Change",
+  "phase": "III",
+  "phase_title": "The Grammar of Structure",
+  "folder": "ch10-dynamics-and-approximation",
+  "files": [
+    "reading.md",
+    "lecture.md",
+    "notes.md",
+    "exercises.md",
+    "assignment.md",
+    "quiz.md"
+  ]
+}

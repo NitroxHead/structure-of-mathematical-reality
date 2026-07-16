@@ -1,0 +1,16 @@
+{
+  "chapter": 1,
+  "slug": "mathematics-is-not-about-numbers",
+  "title": "Mathematics Is Not About Numbers",
+  "phase": "I",
+  "phase_title": "What Mathematics Is",
+  "folder": "ch01-mathematics-is-not-about-numbers",
+  "files": [
+    "reading.md",
+    "lecture.md",
+    "notes.md",
+    "exercises.md",
+    "assignment.md",
+    "quiz.md"
+  ]
+}

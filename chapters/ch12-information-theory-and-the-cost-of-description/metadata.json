@@ -1,0 +1,16 @@
+{
+  "chapter": 12,
+  "slug": "information-theory-and-the-cost-of-description",
+  "title": "Information Theory and the Cost of Description",
+  "phase": "IV",
+  "phase_title": "Information, Compression, and Models",
+  "folder": "ch12-information-theory-and-the-cost-of-description",
+  "files": [
+    "reading.md",
+    "lecture.md",
+    "notes.md",
+    "exercises.md",
+    "assignment.md",
+    "quiz.md"
+  ]
+}

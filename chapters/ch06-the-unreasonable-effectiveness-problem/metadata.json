@@ -1,0 +1,16 @@
+{
+  "chapter": 6,
+  "slug": "the-unreasonable-effectiveness-problem",
+  "title": "The Unreasonable Effectiveness Problem",
+  "phase": "II",
+  "phase_title": "Why Mathematics Works",
+  "folder": "ch06-the-unreasonable-effectiveness-problem",
+  "files": [
+    "reading.md",
+    "lecture.md",
+    "notes.md",
+    "exercises.md",
+    "assignment.md",
+    "quiz.md"
+  ]
+}

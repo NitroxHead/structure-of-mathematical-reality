@@ -1,0 +1,16 @@
+{
+  "chapter": 8,
+  "slug": "vector-spaces-and-the-meaning-of-canvas",
+  "title": "Vector Spaces and the Meaning of \"Canvas\"",
+  "phase": "III",
+  "phase_title": "The Grammar of Structure",
+  "folder": "ch08-vector-spaces-and-the-meaning-of-canvas",
+  "files": [
+    "reading.md",
+    "lecture.md",
+    "notes.md",
+    "exercises.md",
+    "assignment.md",
+    "quiz.md"
+  ]
+}

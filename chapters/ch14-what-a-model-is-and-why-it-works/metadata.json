@@ -1,0 +1,16 @@
+{
+  "chapter": 14,
+  "slug": "what-a-model-is-and-why-it-works",
+  "title": "What a Model Is and Why It Works",
+  "phase": "IV",
+  "phase_title": "Information, Compression, and Models",
+  "folder": "ch14-what-a-model-is-and-why-it-works",
+  "files": [
+    "reading.md",
+    "lecture.md",
+    "notes.md",
+    "exercises.md",
+    "assignment.md",
+    "quiz.md"
+  ]
+}

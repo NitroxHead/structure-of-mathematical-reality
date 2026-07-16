@@ -1,0 +1,16 @@
+{
+  "chapter": 7,
+  "slug": "groups-the-language-of-symmetry",
+  "title": "Groups: The Language of Symmetry",
+  "phase": "III",
+  "phase_title": "The Grammar of Structure",
+  "folder": "ch07-groups-the-language-of-symmetry",
+  "files": [
+    "reading.md",
+    "lecture.md",
+    "notes.md",
+    "exercises.md",
+    "assignment.md",
+    "quiz.md"
+  ]
+}

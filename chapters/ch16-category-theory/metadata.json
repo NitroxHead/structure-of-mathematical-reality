@@ -1,0 +1,16 @@
+{
+  "chapter": 16,
+  "slug": "category-theory",
+  "title": "Category Theory: The Mathematics of Mathematics",
+  "phase": "V",
+  "phase_title": "The Connective Tissue",
+  "folder": "ch16-category-theory",
+  "files": [
+    "reading.md",
+    "lecture.md",
+    "notes.md",
+    "exercises.md",
+    "assignment.md",
+    "quiz.md"
+  ]
+}

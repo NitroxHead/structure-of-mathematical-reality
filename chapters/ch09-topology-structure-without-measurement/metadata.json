@@ -1,0 +1,16 @@
+{
+  "chapter": 9,
+  "slug": "topology-structure-without-measurement",
+  "title": "Topology: Structure Without Measurement",
+  "phase": "III",
+  "phase_title": "The Grammar of Structure",
+  "folder": "ch09-topology-structure-without-measurement",
+  "files": [
+    "reading.md",
+    "lecture.md",
+    "notes.md",
+    "exercises.md",
+    "assignment.md",
+    "quiz.md"
+  ]
+}

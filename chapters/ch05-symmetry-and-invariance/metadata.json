@@ -1,0 +1,16 @@
+{
+  "chapter": 5,
+  "slug": "symmetry-and-invariance",
+  "title": "Symmetry and Invariance: Why Some Operations Are Powerful",
+  "phase": "II",
+  "phase_title": "Why Mathematics Works",
+  "folder": "ch05-symmetry-and-invariance",
+  "files": [
+    "reading.md",
+    "lecture.md",
+    "notes.md",
+    "exercises.md",
+    "assignment.md",
+    "quiz.md"
+  ]
+}

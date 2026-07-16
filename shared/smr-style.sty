@@ -1,0 +1,216 @@
+% smr-style.sty: shared style for "The Structure of Mathematical Reality"
+% Used by all document types: slides, notes, exercises, assignments, quizzes
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{smr-style}[2026/03/29 SMR Curriculum Style]
+
+% ── Common packages ──────────────────────────────────────────────────────────
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+\RequirePackage{lmodern}
+\RequirePackage{amsmath,amssymb,amsthm}
+\RequirePackage{mathtools}
+\@ifclassloaded{beamer}{}{\RequirePackage{enumitem}}  % conflicts with beamer overlay patching
+\RequirePackage{booktabs}
+\RequirePackage{tabularx}
+\RequirePackage{xcolor}
+\RequirePackage{hyperref}
+\RequirePackage{graphicx}
+\RequirePackage{tikz}
+\RequirePackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+
+% ── Color palette ────────────────────────────────────────────────────────────
+\definecolor{smrDark}{HTML}{1B2A4A}
+\definecolor{smrBlue}{HTML}{2D5F8A}
+\definecolor{smrTeal}{HTML}{2A9D8F}
+\definecolor{smrGold}{HTML}{E9C46A}
+\definecolor{smrCoral}{HTML}{E76F51}
+\definecolor{smrLight}{HTML}{F4F1DE}
+\definecolor{smrGray}{HTML}{6B7280}
+
+% ── Hyperlink styling ────────────────────────────────────────────────────────
+\hypersetup{
+    colorlinks=true,
+    linkcolor=smrBlue,
+    urlcolor=smrTeal,
+    citecolor=smrDark
+}
+
+% ── tcolorbox environments (for non-beamer documents) ────────────────────────
+\@ifclassloaded{beamer}{}{
+    % Key Concept box
+    \newtcolorbox{keyconcept}[1][]{%
+        enhanced,
+        colback=smrLight,
+        colframe=smrBlue,
+        coltitle=white,
+        fonttitle=\bfseries,
+        title={Key Concept},
+        arc=2pt,
+        boxrule=1pt,
+        left=8pt, right=8pt, top=6pt, bottom=6pt,
+        breakable,
+        #1
+    }
+
+    % Definition box
+    \newtcolorbox{smrdef}[1][]{%
+        enhanced,
+        colback=white,
+        colframe=smrDark,
+        coltitle=white,
+        fonttitle=\bfseries,
+        title={Definition},
+        arc=2pt,
+        boxrule=1pt,
+        left=8pt, right=8pt, top=6pt, bottom=6pt,
+        breakable,
+        #1
+    }
+
+    % Open Question box
+    \newtcolorbox{openquestion}[1][]{%
+        enhanced,
+        colback=smrCoral!8,
+        colframe=smrCoral,
+        coltitle=white,
+        fonttitle=\bfseries,
+        title={Open Question},
+        arc=2pt,
+        boxrule=1pt,
+        left=8pt, right=8pt, top=6pt, bottom=6pt,
+        breakable,
+        #1
+    }
+
+    % Note/Fill-in box
+    \newtcolorbox{fillbox}[1][]{%
+        enhanced,
+        colback=smrGold!10,
+        colframe=smrGold!80!black,
+        arc=2pt,
+        boxrule=0.5pt,
+        left=8pt, right=8pt, top=6pt, bottom=6pt,
+        breakable,
+        #1
+    }
+}
+
+% ── Common math shortcuts ────────────────────────────────────────────────────
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+
+% ── Curriculum metadata command ──────────────────────────────────────────────
+\newcommand{\smrchapter}[1]{\def\@smrchapter{#1}}
+\newcommand{\smrchaptertitle}[1]{\def\@smrchaptertitle{#1}}
+\newcommand{\smrphase}[1]{\def\@smrphase{#1}}
+\newcommand{\smrdoctype}[1]{\def\@smrdoctype{#1}}
+
+% Defaults
+\smrchapter{0}
+\smrchaptertitle{Untitled}
+\smrphase{I}
+\smrdoctype{Document}
+
+% ── Header/footer for article-class documents ────────────────────────────────
+\@ifclassloaded{beamer}{}{
+    \RequirePackage{fancyhdr}
+    \RequirePackage[margin=1in]{geometry}
+    \pagestyle{fancy}
+    \fancyhf{}
+    \fancyhead[L]{\small\textcolor{smrGray}{The Structure of Mathematical Reality}}
+    \fancyhead[R]{\small\textcolor{smrGray}{Chapter \@smrchapter}}
+    \fancyfoot[C]{\small\textcolor{smrGray}{\thepage}}
+    \renewcommand{\headrulewidth}{0.4pt}
+    \renewcommand{\footrulewidth}{0pt}
+
+    % Title page command for article documents
+    \newcommand{\smrtitlepage}{%
+        \begin{titlepage}
+            \centering
+            \vspace*{2cm}
+            {\small\textcolor{smrGray}{THE STRUCTURE OF MATHEMATICAL REALITY}\par}
+            \vspace{0.5cm}
+            {\small\textcolor{smrGray}{Phase \@smrphase\ --- Chapter \@smrchapter}\par}
+            \vspace{1.5cm}
+            {\Huge\bfseries\textcolor{smrDark}{\@smrchaptertitle}\par}
+            \vspace{1cm}
+            {\Large\textcolor{smrBlue}{\@smrdoctype}\par}
+            \vspace{\fill}
+            {\small\textcolor{smrGray}{Self-Study Curriculum}\par}
+        \end{titlepage}
+    }
+
+    % Section styling
+    \RequirePackage{titlesec}
+    \titleformat{\section}
+        {\Large\bfseries\color{smrDark}}
+        {\thesection}{1em}{}
+    \titleformat{\subsection}
+        {\large\bfseries\color{smrBlue}}
+        {\thesubsection}{1em}{}
+}
+
+% ── Beamer theme configuration ───────────────────────────────────────────────
+\@ifclassloaded{beamer}{
+    \usetheme{default}
+    \usecolortheme{default}
+
+    % Colors
+    \setbeamercolor{structure}{fg=smrBlue}
+    \setbeamercolor{title}{fg=smrDark}
+    \setbeamercolor{frametitle}{fg=smrDark,bg=smrLight}
+    \setbeamercolor{block title}{fg=white,bg=smrBlue}
+    \setbeamercolor{block body}{bg=smrLight}
+    \setbeamercolor{block title alerted}{fg=white,bg=smrCoral}
+    \setbeamercolor{block body alerted}{bg=smrCoral!8}
+    \setbeamercolor{block title example}{fg=white,bg=smrTeal}
+    \setbeamercolor{block body example}{bg=smrTeal!8}
+    \setbeamercolor{normal text}{fg=smrDark}
+    \setbeamercolor{item}{fg=smrBlue}
+    \setbeamercolor{footline}{fg=smrGray}
+
+    % Fonts
+    \setbeamerfont{title}{size=\Large,series=\bfseries}
+    \setbeamerfont{frametitle}{size=\large,series=\bfseries}
+
+    % Remove navigation symbols
+    \setbeamertemplate{navigation symbols}{}
+
+    % Footline with chapter and slide number
+    \setbeamertemplate{footline}{%
+        \hbox{%
+            \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.5ex,dp=1ex,left]{footline}%
+                \hspace{1em}\tiny Chapter \@smrchapter: \@smrchaptertitle%
+            \end{beamercolorbox}%
+            \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.5ex,dp=1ex,right]{footline}%
+                \tiny\insertframenumber/\inserttotalframenumber\hspace{1em}%
+            \end{beamercolorbox}%
+        }%
+    }
+
+    % Title page template
+    \setbeamertemplate{title page}{
+        \centering
+        \vspace{1cm}
+        {\tiny\textcolor{smrGray}{THE STRUCTURE OF MATHEMATICAL REALITY}\par}
+        \vspace{0.3cm}
+        {\tiny\textcolor{smrGray}{Phase \@smrphase\ --- Chapter \@smrchapter}\par}
+        \vspace{1cm}
+        {\usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle\par}
+        \vspace{0.5cm}
+        {\small\textcolor{smrGray}{\insertsubtitle}\par}
+        \vspace{1cm}
+        {\tiny\textcolor{smrGray}{Self-Study Curriculum}\par}
+    }
+
+    % Itemize styling
+    \setbeamertemplate{itemize items}[circle]
+    \setbeamertemplate{enumerate items}[default]
+}{}
+
+\endinput

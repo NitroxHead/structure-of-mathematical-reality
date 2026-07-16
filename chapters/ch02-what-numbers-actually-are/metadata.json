@@ -1,0 +1,16 @@
+{
+  "chapter": 2,
+  "slug": "what-numbers-actually-are",
+  "title": "What Numbers Actually Are",
+  "phase": "I",
+  "phase_title": "What Mathematics Is",
+  "folder": "ch02-what-numbers-actually-are",
+  "files": [
+    "reading.md",
+    "lecture.md",
+    "notes.md",
+    "exercises.md",
+    "assignment.md",
+    "quiz.md"
+  ]
+}

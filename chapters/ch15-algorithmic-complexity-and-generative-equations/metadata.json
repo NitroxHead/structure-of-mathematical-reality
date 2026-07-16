@@ -1,0 +1,16 @@
+{
+  "chapter": 15,
+  "slug": "algorithmic-complexity-and-generative-equations",
+  "title": "Algorithmic Complexity and the Search for Generative Equations",
+  "phase": "IV",
+  "phase_title": "Information, Compression, and Models",
+  "folder": "ch15-algorithmic-complexity-and-generative-equations",
+  "files": [
+    "reading.md",
+    "lecture.md",
+    "notes.md",
+    "exercises.md",
+    "assignment.md",
+    "quiz.md"
+  ]
+}

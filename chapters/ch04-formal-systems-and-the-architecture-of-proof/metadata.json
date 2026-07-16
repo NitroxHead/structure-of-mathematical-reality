@@ -1,0 +1,16 @@
+{
+  "chapter": 4,
+  "slug": "formal-systems-and-the-architecture-of-proof",
+  "title": "Formal Systems and the Architecture of Proof",
+  "phase": "II",
+  "phase_title": "Why Mathematics Works",
+  "folder": "ch04-formal-systems-and-the-architecture-of-proof",
+  "files": [
+    "reading.md",
+    "lecture.md",
+    "notes.md",
+    "exercises.md",
+    "assignment.md",
+    "quiz.md"
+  ]
+}
