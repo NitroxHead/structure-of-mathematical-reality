@@ -606,7 +606,7 @@ This is the structural answer to a question you may have asked: "Why is energy c
 
 You intuited that "linearity is not a property of systems but a property of the relationship between a system and its canvas." This is correct and can now be stated precisely.
 
-A system is "linear" when its behavior under combination is additive: the response to A + B is the response to A plus the response to B. But this depends critically on what you mean by "response," "combination," and "plus." A system that is nonlinear in one set of variables may become linear in another: this is what a change of coordinates does.
+A system is "linear" when its behavior under combination is additive: the response to A + B is the response to A plus the response to B. But this depends critically on what you mean by "response," "combination," and "plus." Two senses of "linear" ride along and should be kept apart: a *map* is linear when it obeys that superposition rule, and a *relationship* is linear when it plots as a straight line. Both are properties of the canvas, not the system: a map that fails to superpose in one set of variables may superpose in another, and a curve that bends in one may straighten in another. A change of coordinates acts on both.
 
 The deeper point: linearity is a symmetry. It is the symmetry under *superposition*, the invariance of the system's structure under addition of inputs. When you linearize a nonlinear system (Taylor expansion, small-signal approximation), you are finding the regime where this symmetry approximately holds. The approximation works when the deviation from the symmetry is small.
 
@@ -1019,7 +1019,7 @@ A system is described by a state that evolves over time. You choose a *represent
 
 But you could choose a different representation, a different "canvas", and the same system's evolution might no longer be linear. Linearity is a property of the *representation*, not the system.
 
-Example: Population growth. If you represent the population as N(t), exponential growth N(t) = N₀eʳᵗ is nonlinear. If you represent it as log N(t), the growth becomes linear: log N(t) = log N₀ + rt. The system is the same. The linearity is in the canvas.
+Example: Population growth (a straight-line, not a superposition, case). Plotted as N(t), exponential growth N(t) = N₀eʳᵗ bends; plotted as log N(t) it straightens: log N(t) = log N₀ + rt. The system is the same; the canvas decides the shape of the graph. Note that as a rule, dN/dt = rN already superposes in N, so this illustrates the straight-line sense of "linear," not the map sense; the map sense being canvas-dependent is what linearization near an equilibrium exploits (Chapter 10).
 
 This is why choosing the right coordinates (the right basis, the right representation) is so important in applied mathematics. The right coordinates are the ones that make the structure of the problem visible, and often, that means making it linear.
 
@@ -2287,7 +2287,7 @@ Over the previous 16 chapters, you have constructed a framework with these compo
 
 5. **Symmetry is the structural reason some operations are powerful, and its absence is the structural reason others are provably hard.** Invariants survive symmetry transformations; Noether's theorem connects symmetries to conservation laws; where no exploitable symmetry exists, brute force is not a failure of cleverness but a fact (computational complexity, P vs. NP). (Chapter 5)
 
-6. **The effectiveness of mathematics is partly explained and partly mysterious.** The explained parts involve structure, selection, symmetry, and *universality* (coarse-graining funnels different systems to the same effective law). The mysterious part, why the universe is compressible at all, remains open. (Chapters 6, 11)
+6. **The effectiveness of mathematics is partly explained and partly mysterious.** Chapter 6 gives four partial answers, structural constraint, compression, symmetry, and selection, and Chapter 11 adds the mechanism beneath the recurrence of shared laws, *universality* (coarse-graining funnels different systems to the same effective description). The mysterious part, the one the compression answer only names, is why the universe is compressible at all. (Chapters 6, 11)
 
 7. **Linearity is a symmetry (superposition), a property of the canvas, not the system, and it is *effective* because smooth systems are locally linear near equilibria (Taylor's theorem).** (Chapters 5, 8, 10)
 

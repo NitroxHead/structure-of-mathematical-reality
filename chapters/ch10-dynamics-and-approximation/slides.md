@@ -73,9 +73,9 @@
 
 ## Linearity Lives in the Canvas
 
-- Exponential growth: nonlinear in N, perfectly linear in log N. Same system, different canvas.
+- Two senses of "linear": dN/dt = rN already superposes in N; plotting log N straightens the *graph*, a different thing.
 - Your own intuition, made exact: linearity is system-plus-canvas, not the system alone.
-- The displacement δ *is* the right canvas, handed to you for free near equilibrium.
+- The displacement δ *is* the right canvas near equilibrium: there the *rule* superposes, whatever f was.
 - Error, stability margin, and perturbation size are one quantity: the size of δ.
 
 ## Multistability

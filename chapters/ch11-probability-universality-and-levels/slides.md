@@ -86,7 +86,7 @@
 - Coarse-graining is an operation on *descriptions*, not states.
 - Its fixed point is a description that further blurring leaves unchanged.
 - Whole classes of systems are funneled onto the same one.
-- Distinguish from Chapter 10's linearization: that was "same equation" from zooming *in*; this is "same equation" from averaging *out*.
+- Distinguish from Chapter 10's route: that was "same equation" from local structure (linearization, or exact proportionality); this is "same equation" from averaging *out*.
 
 ## Why biology is modelable at all
 

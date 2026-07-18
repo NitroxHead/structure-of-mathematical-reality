@@ -63,10 +63,10 @@
 
 ## Worked: Population Growth
 
-- Count N(t): growth N(t) = N₀eʳᵗ is nonlinear; the curve bends.
-- Log canvas: log N(t) = log N₀ + rt is a straight line.
-- Same bacteria, same system; only the canvas changed.
-- Linear canvas = the canvas where superposition (Chapter 5) holds.
+- Count N(t): the growth curve N(t) = N₀eʳᵗ *bends* when plotted against time.
+- Log canvas: log N(t) = log N₀ + rt draws as a straight line.
+- Same bacteria, same system; only the canvas changed the *shape of the plot*.
+- Two senses of "linear": as a rule, dN/dt = rN already superposes on the N canvas; the log canvas straightens the *graph*, a different (everyday) sense.
 
 ## Linearization
 
